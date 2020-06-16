@@ -1,0 +1,320 @@
+//覆盖一些element-ui样式
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+    width: 60px;
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+//暂时性解决dialog 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+//文章页textarea修改样式
+.article-textarea {
+  textarea {
+    padding-right: 40px;
+    resize: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #bfcbd9;
+  }
+}
+
+//element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+//dropdown
+.el-dropdown-menu {
+  a {
+    display: block;
+  }
+}
+#packageTable {
+  thead {
+    th {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.deploy-action-btn.el-button--mini {
+  padding: 7px 5px;
+}
+
+.el-tabs .el-tabs__content {
+  height: 100%;
+  overflow-y: scroll;
+  /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+  -ms-overflow-style: none;
+  /*火狐下隐藏滚动条*/
+  overflow: -moz-scrollbars-none;
+}
+/*Chrome下隐藏滚动条，溢出可以透明滚动*/
+.el-tabs {
+  .el-tabs__content::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+.project-container .el-tabs__header.is-left {
+  position: absolute;
+  left: calc(18% - 130px);
+  .el-tabs__item {
+    color: #777;
+  }
+  .el-tabs__item:hover,
+  .el-tabs__item.is-active {
+    color: #409eff;
+  }
+}
+.limit-width-dialog {
+  .el-dialog {
+    max-width: 540px;
+  }
+}
+
+.scanResDialog .el-tabs__content {
+  height: 500px;
+  overflow-y: scroll;
+}
+.scanResDialog {
+  .el-dialog {
+    .el-dialog__body {
+      padding-top: 0;
+    }
+    min-width: 620px;
+  }
+  .searchResTable {
+    height: 500px;
+    overflow-y: scroll;
+  }
+}
+
+.no-padding-dialog {
+  .el-dialog {
+    .el-dialog__body {
+      padding-top: 0;
+    }
+  }
+  .filter-item {
+    .el-input__inner {
+      border-radius: 100px;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}
+
+.ableToSelectComp {
+  .el-table__expanded-cell {
+    padding: 4px 30px;
+  }
+}
+
+.sidebar-container {
+  background-color: transparent;
+  ul.el-menu {
+    background-color: transparent !important;
+    .el-menu-item.submenu-title-noDropdown {
+      background-color: transparent !important;
+      color: #fff !important;
+      &.is-active {
+        color: #1e9fff !important;
+      }
+    }
+  }
+}
+
+.main-container,
+.fileComp {
+  .navbar.el-menu--horizontal.el-menu {
+    background: rgba(37, 37, 37, 0.2) !important;
+    border-bottom: 1px solid #39639e;
+  }
+  .scroll-container.tags-view-wrapper {
+    background: rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 1px solid #4b739e !important;
+  }
+  .el-table,
+  el-table th,
+  .el-table tr {
+    background: rgba(34, 59, 97, 0.7) !important;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .el-table--enable-row-hover .el-table__body tr:hover > td {
+    background: rgba(36, 96, 160, 0.8) !important;
+  }
+  .el-table__row.current-row,
+  .el-table__row.current-row td {
+    background: #376ed0 !important;
+  }
+  .el-table tr th {
+    background: #314d7e !important;
+  }
+  .el-table td,
+  .el-table th {
+    border-color: #6096d0 !important;
+  }
+  .el-table--border,
+  .el-table--group {
+    border: 1px solid #586694 !important;
+  }
+  .link-type,
+  .link-type:focus {
+    color: #079ce4 !important;
+  }
+  table,
+  thead,
+  tbody,
+  tr,
+  td {
+    border-color: #6096d0 !important;
+  }
+  .el-table--border::after,
+  .el-table--group::after {
+    background-color: transparent;
+  }
+}
+
+.el-table::before {
+  background: transparent;
+}
+
+.el-dialog,
+.el-dialog__body {
+  background: linear-gradient(
+    160deg,
+    rgba(44, 114, 202, 0.9) 20%,
+    rgba(14, 65, 108, 0.8) 80%
+  );
+  .el-card {
+    border: none;
+    background: none;
+    border: 1px solid #498ee4;
+  }
+  .el-card__body {
+    // background: rgba(43, 87, 134, 0.7);
+    background: transparent;
+  }
+  .el-card__header {
+    border-bottom-color: #2b99e8 !important ;
+  }
+  label.el-form-item__label {
+    color: #fff;
+  }
+  .el-input__inner {
+    background: rgba(0, 0, 0, 0.1) !important;
+    color: #fff;
+  }
+  svg {
+    color: #fff;
+  }
+}
+.el-dialog__title {
+  color: #fff;
+  font-weight: 700;
+}
+.uploader-btn-title {
+  color: #fff;
+}
+.el-popover {
+  border: none;
+  .el-popover__title {
+    // color: #fff;
+    font-weight: 500;
+  }
+  /*background: rgba(0,0,0,0.8);*/
+  .popper__arrow::after {
+    border-right-color: transparent !important;
+  }
+}
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  color: #fff !important;
+}
+
+.el-pagination {
+  .el-pagination__total {
+    color: #fff;
+  }
+  .el-pagination__jump {
+    color: #fff;
+  }
+}
+
+.el-upload-list__item-name {
+  color: #fff !important;
+}
+
+.uploader-file-name {
+  color: #fff;
+}
+
+.uploader-file-size {
+  color: #fff;
+}
+
+.uploader-file-status {
+  color: #fff;
+}
+
+
+.el-loading-mask {
+  background-color: rgba(255, 255, 255, 0.3);
+}
