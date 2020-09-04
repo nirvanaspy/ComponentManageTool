@@ -35,7 +35,7 @@
     "nprogress": "0.2.0",
     "qs": "^6.7.0",
     "screenfull": "3.3.3",
-    "showdown": "1.8.5",
+    "showdown": "1.9.1",
     "simplemde": "1.11.2",
     "sockjs-client": "^1.1.5",
     "sortablejs": "1.7.0",
